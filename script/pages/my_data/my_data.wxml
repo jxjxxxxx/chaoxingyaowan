@@ -1,0 +1,43 @@
+
+<view class="udata" bindtap = "changeAvatar">
+    <text class="word" decode="true">&nbsp;&nbsp;头像</text>
+    <image class="right" src="../../icons/right.png" />
+    <image class="right_avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+</view>
+
+
+<view class="udata" bindtap = "name">
+    <text class="word" decode="true">&nbsp;&nbsp;昵称</text>
+    <image class="right" src="../../icons/right.png" />
+    <text class="right_word" decode="true" >{{userInfo.nickname}}&nbsp;</text>
+</view>
+
+<picker mode="selector" range="{{sex1}}" bindchange="bindsexChange">
+    <view class="udata">
+        <text class="word" decode="true">&nbsp;&nbsp;性别</text>
+        <image class="right" src="../../icons/right.png" />
+        <text class="right_word" decode="true">{{sex1[index]}}&nbsp;</text>
+    </view>
+</picker>
+
+<view class="udata" bindtap = "wxNum">
+    <text class="word" decode="true">&nbsp;&nbsp;微信号</text>
+    <image class="right" src="../../icons/right.png" />
+    <text class="right_word" decode="true" >{{userInfo.wxNum}}&nbsp;</text>
+</view>
+
+<picker mode="selector" range='{{areaArray}}' bindchange='changeArea'>
+    <view class="udata">
+        <text class="word" decode="true">&nbsp;&nbsp;所在地</text>
+        <image class="right" src="../../icons/right.png" />
+        <text class="right_word" decode="true"> {{area}}</text>
+    </view>
+</picker>
+
+<view class="udata" bindtap = "intro">
+    <text class="word" decode="true">&nbsp;&nbsp;简介</text>
+    <image class="right" src="../../icons/right.png" />
+    <text class="right_birth" decode="true">{{userInfo.userIntro}}</text>
+    
+</view>   
+

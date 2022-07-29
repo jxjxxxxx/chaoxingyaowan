@@ -1,0 +1,54 @@
+
+<view class="allbox">
+    <view class="absolute">
+        <navigator class="nav" url="/pages/script/script" >
+            <view class="box" >
+                <image class="item" src="../../icons/script.png"/>
+                <view class="font28">剧本：{{script}}</view>
+                <image class="right" src="../../icons/whiteright.png"/>
+            </view>
+        </navigator>
+    </view>
+
+    
+    <view class="absolute">
+        <navigator class="nav" url="/pages/place/place" >
+            <view class="box" >
+                <image class="item" src="../../icons/whiteplace.png"/>
+                <view class="font28">地点：{{area}}{{location}}</view>
+                <image class="right" src="../../icons/whiteright.png"/>
+            </view> 
+        </navigator>  
+    </view>
+    
+    
+    <view class="absolute">
+        <picker mode="date" value="{{date}}" bindchange="bindDateChange" start="{{todate}}" end="{{enddate}}">
+            <view class="box" >    
+                <image class="item" src="../../icons/whitedate.png"/>    
+                <view class="font28">
+                    <text class="color" decode="true">日期:&nbsp;&nbsp;</text>
+                    <text class="color">{{date}}</text>
+                </view>
+                <image class="right" src="../../icons/whiteright.png"/>
+            </view>
+        </picker>
+    </view>
+    <view class="absolute">
+        <picker mode="multiSelector" range='{{timeArray}}' range-key='name' bindchange='changeMulti'>
+            <view class="box" >
+                <image class="item" src="../../icons/whitetime.png"/>
+                <view class="font28">
+                    <text class="color">时间：</text>
+                    <text class="color">{{time}}</text>
+                </view>
+                <image class="right" src="../../icons/whiteright.png"/>
+            </view>
+        </picker>
+    </view>
+</view>
+
+<button class="default" bindtap = "make">
+    发起组队
+</button>
+

@@ -1,0 +1,131 @@
+page{
+    background-color: #EEE7E1;
+}
+
+.allsearch{
+    height:80rpx;
+}
+.search{
+    background-color: #F0E7E2;
+    height:80rpx; 
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+.search-box {
+        display: flex;
+        margin-top: 15rpx;
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #F0E7E2;
+}
+
+.search-input {
+    
+    height:50rpx;
+    width:552rpx;
+    justify-self: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-top-right-radius:30rpx;
+    border-bottom-right-radius:30rpx;
+    font-size: 33rpx;
+    }
+
+.search-icon {
+        margin-left: 34rpx;
+        justify-self: center;
+        width:40rpx;
+        height: 50rpx;
+        padding:7rpx;
+        background-color: rgb(255, 255, 255);
+        border-top-left-radius:30rpx;
+        border-bottom-left-radius:30rpx;
+    }
+.search-btn{
+    flex:1;
+    font-size: 28rpx;
+    color:#C39FC5;
+    height: 50rpx;
+    margin-left: 34rpx;
+    margin-top: 6rpx;
+} 
+
+.scr{
+    height: 220rpx;
+    width: 688rpx;
+    
+    position: relative;
+}
+
+.script{
+    position: relative;
+    height: 140rpx;
+    width: 688rpx;
+    z-index: 0;
+    margin-top: 16rpx;
+    border-radius: 10rpx;
+    background-color: #F3EAE3;
+    color: rgba(16, 16, 16, 100);
+    font-size: 28rpx;
+    text-align: center;
+    box-shadow: 0rpx 4rpx 12rpx 0rpx rgba(0, 0, 0, 0.4);
+    font-family: Arial;
+    border: 4rpx solid #C39FC5 ;
+    left:30rpx;
+    }
+
+.scrimg{
+    position: absolute;
+    width:100rpx;
+    height:100rpx;
+    top:18rpx;
+    left:18rpx;
+}
+
+.scrname{
+    position: absolute;
+    font-size: 32rpx;
+    left:150rpx;
+    top:18rpx;
+    color:#101010;
+    font-weight: bold;
+}
+
+.scrperson{
+    position: absolute;
+    left:150rpx;
+    top:78rpx;
+    height:38rpx;
+    width: 38rpx;
+}
+
+.persons{
+    position: absolute;
+    top:78rpx;
+    left:195rpx;
+    color:#C39FC5;
+}
+
+.choose{
+    position: absolute;
+    right:20rpx;
+    top:60rpx;
+    border-radius: 4px;
+    background-color: #C39FC5;
+    color: rgba(255, 255, 255, 100);
+    font-size: 14px;
+    text-align: center;
+    width: 160rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.tags{
+    position: absolute;
+    top:80rpx;
+    left:280rpx;
+    font-size: 24rpx;
+    font-family: Arial;
+    color:#C39FC5;
+}

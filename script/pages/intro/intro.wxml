@@ -1,0 +1,10 @@
+<view class="input_border">
+    <view class="reminder">简介</view>
+    <view class="input_id">
+        <input type="text" class="id_input" maxlength="18"  placeholder="{{intro}}" bindinput="input"/>
+    </view>
+</view>
+
+<view class="button">
+    <button class="commit" bindtap = "intro">提交</button>
+</view> 

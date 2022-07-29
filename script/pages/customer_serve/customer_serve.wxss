@@ -1,0 +1,25 @@
+page{
+    background-color: #EEE7E1;
+}
+
+.content_border {
+    width: 100%;
+    position: relative;
+}
+
+.img{
+    position: absolute;
+    height:400rpx;
+    width: 400rpx;
+    top:524rpx;
+    left:176rpx;
+}
+
+.text{
+    position: absolute;
+    color: #C68BC2;
+    font-size: 40rpx;
+    font-family: Roboto-bold;
+    top:378rpx;
+    left:154rpx;
+}

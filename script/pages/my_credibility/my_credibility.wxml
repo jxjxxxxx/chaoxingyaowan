@@ -1,0 +1,18 @@
+
+<image class="jifen2" src="../../icons/jifen2.png"/>  
+<image class="jifen1" src="../../icons/jifen1.png"/>
+<view class="box">
+    <view class="num">{{num}}</view>
+</view>
+
+<navigator url="/pages/rules/rules" >
+    <button id="one" >
+        违规说明
+    </button>
+</navigator>
+
+<navigator url="/pages/customer_serve/customer_serve" >
+    <button id="two" >
+        积分申诉
+    </button>
+</navigator>

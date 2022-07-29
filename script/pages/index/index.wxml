@@ -1,0 +1,118 @@
+<view class="{{shadeshow?'show':'hide'}}" bindtap = "cancel">
+  <view class="shade"> 
+  </view>
+</view> 
+
+  
+<view class="allsearch" bindtap = "search">
+  <view class="search">
+    <view class="search-box">
+      <image class="search-icon" src="../../icons/pinksearch.png"/>
+      <view class="search-input">按剧本名搜索车队</view>
+      <view class="search-btn" >搜索</view>
+    </view>
+  </view>
+</view>
+  
+<swiper autoplay interval='2000' circular indicator-dots>
+  <swiper-item ><image class="img" src="https://beyond-murder.oss-cn-chengdu.aliyuncs.com/circularBanner/9f287840-7136-45a7-b27b-cfeca1af6a16.png"/> </swiper-item>
+  <swiper-item ><image class="img" src="https://beyond-murder.oss-cn-chengdu.aliyuncs.com/circularBanner/b04ec343-02ce-4b96-9346-dab07a33a09c.png"/> </swiper-item>
+  
+</swiper>
+
+<view class="sift">
+        <view class="uname" id="1" bindtap="a_show">{{sift_ticai}}</view>
+        <image class="xia" src="../../icons/pinkdown.png" bindtap="a_show"/>
+        <view class="uname" id="2" bindtap="b_show">{{sift_time}}</view>
+        <image class="xia" src="../../icons/pinkdown.png" bindtap="b_show"/>
+        <view class="uname" id="3" bindtap="d_show">{{sift_place}}</view>
+        <image class="xia" src="../../icons/pinkdown.png" bindtap="d_show"/>
+        <view class="uname" id="4" bindtap="c_show">{{sift_person}}</view>
+        <image class="xia" src="../../icons/pinkdown.png" bindtap="c_show"/>
+</view>
+
+<view class="siftbox">
+      <view class="list">
+        <view class = "a{{isa_show?'conts':'hide'}}" 
+        wx:for="{{list1}}" 
+        data-index="{{index}}"
+        data-name="{{item}}"
+        wx:key="id"
+        bindtap = "choose1"
+        style = "{{key1==index?'color:black;':'color: rgb(197, 197, 197)'}}"
+        >
+        {{item}}
+        </view>
+      </view>
+      
+
+      <view class="list">
+        <view class = "b{{isb_show?'conts':'hide'}}" 
+        wx:for="{{list2}}"
+        data-index="{{index}}"
+        data-name="{{item.name}}"
+        wx:key="id"
+        bindtap = "choose2"
+        style = "{{key2==index?'color:black;':'color: rgb(197, 197, 197)'}}"
+        >
+        {{item.name}}
+        </view>
+      </view>
+
+      <view class="list">
+        <view class = "c{{isc_show?'conts':'hide'}}" 
+        wx:for="{{list3}}"
+        data-index="{{index}}"
+        data-name="{{item.name}}"
+        wx:key="id"
+        bindtap = "choose3"
+        style = "{{key3==index?'color:black;':'color: rgb(197, 197, 197)'}}"
+        >
+        {{item.name}}
+        </view>
+      </view>
+
+      <view class="list">
+        <view class = "d{{isd_show?'conts':'hide'}}" 
+        wx:for="{{list4}}"
+        data-index="{{index}}"
+        data-name="{{item.name}}"
+        wx:key="id"
+        bindtap = "choose4"
+        style = "{{key4==index?'color:black;':'color: rgb(197, 197, 197)'}}"
+        >
+        {{item.name}}
+        </view>
+      </view>
+</view>
+
+<view class="script" 
+wx:for="{{rooms}}"
+wx:key="id"
+data-index="{{index}}"
+data-name="{{item.script.scriptName}}"
+data-roomid="{{item.roomId}}"
+bindtap = "team">
+    <image class="scrimg" src="{{item.script.scriptCoverUrl}}"/>
+    <view class="scrname">
+    {{item.script.scriptName}}
+    </view>
+    <image class="scrtime" src="../../icons/time.png"/>
+    <view class="time">{{date[index]}}</view>    
+    <image class="scrplace" src="../../icons/place.png"/>
+    <view class="place">{{item.locationName}}</view>
+</view>
+
+
+
+
+  
+
+  
+
+
+  
+   
+  
+
+ 

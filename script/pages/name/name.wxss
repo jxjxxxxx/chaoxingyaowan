@@ -1,0 +1,52 @@
+page{
+    background-color: #EEE7E1;
+}
+
+.input_border {
+    display: flex;
+    width: 750rpx;
+    height: 96rpx;
+    line-height: 96rpx;
+    background-color: rgba(242, 242, 242, 100);
+    color: rgba(255, 255, 255, 100);
+    font-size: 32rpx;
+    text-align: left;
+    font-family: Arial;
+}
+
+.reminder {
+    
+    width: 120rpx;
+    height: 48rpx;
+    line-height: 32rpx;
+    color: rgba(150, 147, 147, 100);
+    font-size: 32rpx;
+    text-align: left;
+    font-family: SourceHanSansSC-regular;
+    margin-top: 30rpx;
+    margin-left: 16rpx;
+}
+
+.input_id {
+    
+    width: 326rpx;
+    height: 48rpx;
+    line-height: 48rpx;
+    color: rgba(16, 16, 16, 100);
+    font-size: 32rpx;
+    text-align: left;
+    font-family: PingFangSC-regular;
+    margin-top: 25rpx;
+    margin-left: 16rpx;
+}
+
+.commit{
+    height: 80rpx;
+    margin-top: 8rpx;
+    margin-right: 10rpx;
+    font-size: 32rpx;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+    border: none;
+    background-color: rgba(242, 242, 242, 100);
+}

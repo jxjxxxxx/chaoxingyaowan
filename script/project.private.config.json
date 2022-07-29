@@ -1,0 +1,60 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "地点",
+          "pathName": "pages/place/place",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "剧本",
+          "pathName": "pages/script/script",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my_data/my_data",
+          "pathName": "pages/my_data/my_data",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "组队",
+          "pathName": "pages/make_team/make_team",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/weixinID/weixinID",
+          "pathName": "pages/weixinID/weixinID",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/customer_serve/customer_serve",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/my_credibility/my_credibility",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

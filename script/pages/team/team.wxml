@@ -1,0 +1,143 @@
+<view class="{{shadeshow?'show':'hide'}}" bindtap = "cancel">
+  <view class="shade"> 
+  </view>
+</view>
+
+<view class="buttonback"> 
+</view>
+
+<button class="{{isentered?'hide':'unenter'}}" bindtap = "enter">
+  加入车队
+</button>
+
+<view class="{{isentered&&!isAdmin?'in':'hide'}}">
+  <button class="host" bindtap = "host">
+    联系车主
+  </button>
+</view>  
+
+<view class="{{isAdmin?'admin':'hide'}}">
+  <button class="check" bindtap = "check">
+    联系车上玩家
+  </button>
+</view>
+
+<view class="script">
+      
+      <image class="more" src="../../icons/more.png"/>
+      <button  class="morebtn" open-type="{{isentered?'':'share'}}" bindtap = "{{isentered?'showActionSheet':''}}"></button>
+      <view class="tagbox">
+        <view class="tags"
+        wx:for="{{roomData.script.tags}}"
+        wx:key="id"
+        >
+        {{item}}
+        </view>
+        
+      </view>
+      <image class="scrimg" src="{{roomData.script.scriptCoverUrl}}"/>
+      <view class="scrname">
+        {{roomData.script.scriptName}}
+      </view>
+      <image class="scrtime" src="../../icons/teamtime.png"></image>
+      <text class="time">{{goDate}}</text>
+      <image class="scrplace" src="../../icons/teamplace.png"></image>
+      <text class="place" decode="true">{{roomData.area}}&nbsp;&nbsp;{{roomData.locationName}}</text>
+</view>
+
+<view class="team">   
+    <view class="team_box">
+        <image class="teamboy" src="../../icons/man.png" wx-if="{{roomData.script.manMax!=0}}"/>
+        <view class="playerimg"
+        wx:for="{{roomData.players}}"
+        wx:key="id"
+        wx:if="{{item.gender == 'MAN'}}"
+        style = "background-color:{{color[item.groupId]}};"
+        >
+          <image class="know" src="{{item.avatarUrl}}" mode="aspectFill"
+          data-userid="{{item.userId}}"
+          bindtap = "teammate"
+          />
+        </view>
+        <image class="unknow" src="../../icons/unknow.png"
+        wx:for="{{roomData.script.manMax - roomData.manNum}}"
+        wx:key="id"
+        />
+    </view>    
+    
+    <view class="team_box">
+        <image class="teamgirl" src="../../icons/woman.png" wx-if="{{roomData.script.womanMax!=0}}"/>
+        <view class="playerimg"
+        wx:for="{{roomData.players}}"
+        wx:key="id"    
+        wx:if="{{item.gender == 'WOMAN'}}"
+        style = "background-color:{{color[item.groupId]}};"
+        >
+          <image class="know" src="{{item.avatarUrl}}" mode="aspectFill"
+          data-userid="{{item.userId}}"
+          bindtap = "teammate"
+          />
+        </view>  
+          
+
+        <image class="unknow" src="../../icons/unknow.png"
+        wx:for="{{roomData.script.womanMax - roomData.womanNum}}"
+        wx:key="id"
+        />
+    </view>
+</view>
+
+<view class="introduction">
+    <text class="intro">{{roomData.script.scriptIntro}}</text>
+</view>
+
+
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+   <action-sheet-item open-type="share">
+         <button class='share' open-type="share">分享车队</button>
+   </action-sheet-item>
+   <action-sheet-item bindtap = "dissolve" wx:if="{{isAdmin}}">解散车队</action-sheet-item>
+   <action-sheet-item bindtap = "quit" wx:if="{{!isAdmin&&isentered}}">退出车队</action-sheet-item>
+</action-sheet>
+
+
+<view class="{{isChecked?'weixinBox':'hide'}}">
+    <view class="title">查看玩家微信</view>
+    <view class='playerBox'
+    wx:for="{{roomData.players}}"
+    wx:key="id"
+    data-userId='{{item.userId}}'
+    wx:if="{{item.userId != roomData.adminId}}">
+      <image class='avatar' src='{{item.avatarUrl}}' mode="aspectFill"/>
+      <view class='wxNum'>{{item.wxNum}}</view>
+      <view class="{{ismanaging?'hide':'kick'}}" data-wxNum='{{item.wxNum}}' bindtap="copy">
+        复制微信号
+      </view>
+      <view class="{{ismanaging?'kick':'hide'}}" data-userId='{{item.userId}}' bindtap='kick'>
+        踢出车队
+      </view>   
+    </view>
+
+    <view class="{{ismanaging?'hide':'manage'}}" bindtap='manage'>管理车队</view>
+    <view class="{{ismanaging?'manage':'hide'}}" bindtap='manage'>复制微信号</view>
+</view>
+
+<view class="{{host?'weixinBox2':'hide'}}">
+    <view class="title">车主微信号</view>
+    <view class="title2">请添加车主微信</view>
+    <view class='hostBox'
+    wx:for="{{roomData.players}}"
+    wx:key="id"
+    data-userId='{{item.userId}}'
+    wx:if="{{item.userId == roomData.adminId}}">
+      <view class='wxNum'>{{item.wxNum}}</view>
+      <view class="copy" data-wxNum='{{item.wxNum}}' bindtap="copy">
+        一键复制微信号
+      </view>   
+    </view>
+
+    
+</view>
+  
+  

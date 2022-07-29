@@ -1,0 +1,50 @@
+page{
+  background-color: #EEE7E1;
+}
+
+.udata {
+  height: 132rpx;
+  border-bottom: 2rpx solid #ccc;
+  font-size: 36rpx;
+}
+
+.word {
+  font-size: 36rpx;
+  line-height: 132rpx;
+}
+
+.right_avatar{
+  height: 100rpx;
+  width: 108rpx;
+  float: right;
+  margin-top: 16rpx;
+  border-radius: 8rpx;
+}
+
+.right_word {
+  height: 100%;
+  color: rgba(16, 16, 16, 100);
+  font-size: 32rpx;
+  line-height: 132rpx;
+  text-align: left;
+  float: right;
+  font-family: PingFangSC-regular;
+}
+
+.right_birth {
+  height: 100%;
+  color: rgba(16, 16, 16, 100);
+  font-size: 32rpx;
+  line-height: 132rpx;
+  text-align: left;
+  float: right;
+  font-family: PingFangSC-thin;
+}
+
+.right {
+  height: 48rpx;
+  width: 48rpx;
+  float: right;
+  margin-top: 42rpx;
+  
+}

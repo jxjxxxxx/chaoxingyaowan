@@ -1,0 +1,20 @@
+page{
+    background-color: #EEE7E1;
+}
+
+.udata{
+    height:100rpx;
+    border-bottom: 2rpx solid #ccc ;
+}
+
+.word{
+    font-size: 40rpx;
+    line-height: 100rpx;
+}
+
+.right{
+    height:40rpx;
+    width: 40rpx;
+    float:right;
+    margin-top: 30rpx;
+}

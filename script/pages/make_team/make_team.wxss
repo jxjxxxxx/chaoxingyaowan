@@ -1,0 +1,66 @@
+page{
+    background-color: #EEE7E1;
+    font-family: Arial;
+}
+
+.allbox{
+    height: 700rpx;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.box{
+    position: relative;
+    height:72rpx;
+    line-height: 48rpx;
+    margin-top: 50rpx;
+    margin-left: 62rpx;
+    margin-right: 62rpx;
+    border-radius: 15rpx;
+    font-size: 28rpx;
+    background-color: #D8A8B8;
+}
+
+.item{
+    left: 24rpx;
+    top:12rpx;
+    position: absolute;
+    height:48rpx;
+    width: 48rpx;
+
+}
+
+.right{
+    position: absolute;
+    height:48rpx;
+    width: 48rpx;
+    right: 30rpx;
+    bottom:12rpx;
+}
+
+.default{
+    background-color: #D8A8B8;
+    color: #EEE7E1;
+    width: 314rpx;
+    height:146rpx;
+    line-height: 146rpx;
+    font-size: 40rpx;
+    border-radius: 15rpx;
+}
+
+.font28{
+    font-size: 28rpx;
+    position: absolute;
+    left:100rpx;
+    top:12rpx;
+    color: #EEE7E1;
+  }
+  
+.color{
+    color: #EEE7E1;
+  }
+  
+
+  
